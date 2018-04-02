@@ -110,17 +110,16 @@
             <configuration>
                 <fork>true</fork>
                 <executable>C:\Program Files\Java\jdk1.8.0_25\bin\javac.exe</executable>
-                <suite name="FREE CRM Application Test Automation Test Suite">
-					<listeners>
-						<listener class-name="com.qa.ExtentReportListener.ExtentReporterNG" />
-					</listeners>
-					<test name="Free CRM App Test Cases">
-						<classes>
-							<class name="com.crm.qa.testcases.LoginPageTest"></class>
-						</classes>
-					</test>
-				</suite>
-            </configuration>
+                <properties>
+                	<property>
+                		<name>Listener</name>
+                		<value>com.qa.ExtentReportListener.ExtentReporterNG</value>
+                	</property>
+                </properties>
+                <suiteXmlFiles>
+               		 <file>src/main/ressources/testng_sanity.xml</file>
+                </suiteXmlFiles>
+           </configuration>
         </plugin>
     </plugins>
    </build>
